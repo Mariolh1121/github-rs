@@ -1,0 +1,4 @@
+
+*.dat
+results/
+.DS_store
