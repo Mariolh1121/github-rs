@@ -1,6 +1,6 @@
 # Sumador de Números en Archivo
 
-Este es un script de Python diseñado para leer números (enteros o decimales) de un archivo y sumarlos.
+
 
 ## Uso
 
