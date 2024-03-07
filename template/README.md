@@ -1,5 +1,9 @@
 # Sumador de Números en Archivo
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d7fa7203da5fa6921aee11da7113126179e11152
 
 ## Uso
 
@@ -44,4 +48,8 @@ Si utiliza este script en su trabajo, por favor cite: [mariolh@lcg.unam.mx].
 
 ## Contáctenos
 
+<<<<<<< HEAD
 Si tiene problemas o preguntas, por favor abra un problema en este repositorio o póngase en contacto con nosotros en: [mariolh@lcg.unam.mx].
+=======
+Si tiene problemas o preguntas, por favor abra un problema en este repositorio o póngase en contacto con nosotros en: [información de contacto].
+>>>>>>> d7fa7203da5fa6921aee11da7113126179e11152
