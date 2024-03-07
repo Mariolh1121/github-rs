@@ -4,7 +4,7 @@
 
 ## Uso
 
-El script acepta un solo argumento, el nombre del archivo a leer:
+
 
 ```
 python sumador.py -inputfile [archivo]
