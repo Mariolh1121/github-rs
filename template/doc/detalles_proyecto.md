@@ -5,6 +5,7 @@ Fecha: 08/01/2024
 **Participantes**:
 
 - Mario Limón <email:mariolh@lcg.unam.mx>
+- Daniel Bautista
 
 ## Descripción del Problema
 
