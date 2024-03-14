@@ -1,4 +1,4 @@
-# Nombre del Programa/Proyecto Mario Limón 
+# Nombre del Programa/Proyecto
 
 
 ## Uso
