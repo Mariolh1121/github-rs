@@ -16,16 +16,16 @@ CATEGORY
 
 USAGE
 
-    % python programName
+    % Count of ATCG
     
 
 ARGUMENTS
 
+-Raw file
 
 METHOD
 
-
-SEE ALSO
+-Counting nomber of each nucleotide by reading the file
 
 
         
@@ -34,7 +34,7 @@ nA = 0
 nC = 0
 nG = 0
 nT = 0
-with open('archivo.txt', 'r') as file:
+with open('sequence.txt', 'r') as file:
     lines = file.read()
 sequence = lines.upper()
 for base in sequence:
@@ -46,6 +46,11 @@ for base in sequence:
         nG+=1
     elif base == 'T':
         nT+=1
+print(f"Contenido de:
+      Adenina = {nA}
+      Guanina = {nG}
+      Citosina = {nC}
+      Timina = {nT}")
 # Posteriormente se imprime
 
 # ===========================================================================
