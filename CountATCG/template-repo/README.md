@@ -1,20 +1,19 @@
 # Nombre del Programa/Proyecto
-
-
+Este programa cuenta la ocurrencia de los nucleotidos 'A', 'C', 'T' y 'G' en una secuencia de DNA
 ## Uso
 
-
+El programa recibe como input un archivo que contiene una secuencia de DNA 
 ```
-
+python3 count_atgc.py <file>
 ```
 
 
 ## Salida
-
+El script imprime a pantalla la ocurrencia de cada nucleotido de la secuencia de DNA proporcionada
 
 ## Control de errores
 
-
+Si el arcchivo no se proporciona, se imprime a pantalla un mensaje de error.
 
 ## Pruebas
 
