@@ -2,16 +2,20 @@
 ATCG count
        
 
-1.0
+2.0
         
 
 Mario Alberto Limón Hernández
         
 
-DESCRIPTION: Counts number of ATCG nucleotides
-        
+DESCRIPTION: 
+This script counts the occurrence of nucleotides 'A', 'T', 'G' and 'C' in a file with a .txt extension.
+The file is provided as a positional argument from the command line.
 
-CATEGORY
+Options:
+inputfile: Path to the input file containing DNA sequences.
+        
+-n  --nucleotides: Nucleotides to be counted.
         
 
 USAGE
@@ -30,27 +34,36 @@ METHOD
 
         
 '''
-nA = 0
-nC = 0
-nG = 0
-nT = 0
-with open('sequence.txt', 'r') as file:
-    lines = file.read()
-sequence = lines.upper()
-for base in sequence:
-    if base == 'A':
-        nA+=1
-    elif base == 'C':
-        nC+=1
-    elif base == 'G':
-        nG+=1
-    elif base == 'T':
-        nT+=1
-print(f"Contenido de:
-      Adenina = {nA}
-      Guanina = {nG}
-      Citosina = {nC}
-      Timina = {nT}")
+import argparse
+
+def count_nucleotides(sequence, nucleotides):
+    nA = sequence.count('A')
+    nC = sequence.count('C')
+    nG = sequence.count('G')
+    nT = sequence.count('T')
+    counts = {'A': nA, 'C': nC, 'G': nG, 'T': nT}
+    if nucleotides:
+        return {n: counts.get(n, 0) for n in nucleotides}
+    return counts
+
+def main():
+    parser = argparse.ArgumentParser(description='Count occurrences of nucleotides in a DNA sequence file.')
+    parser.add_argument('filename', metavar='FILENAME', type=str, help='Name of the file containing the DNA sequence')
+    parser.add_argument('-n', '--nucleotides', metavar='N', nargs='+', type=str, help='List of nucleotides to count')
+    args = parser.parse_args()
+
+    try:
+        with open(args.filename, 'r') as file:
+            sequence = file.read().strip().upper()
+            counts = count_nucleotides(sequence, args.nucleotides)
+            if args.nucleotides:
+                for nucleotide, count in counts.items():
+                    print(f"Frecuencia de {nucleotide}: {count}")
+            else:
+                for nucleotide, count in counts.items():
+                    print(f"Frecuencia de {nucleotide}: {count}")
+    except FileNotFoundError:
+        print(f"Error: El archivo '{args.filename}' no existe.")
 # Posteriormente se imprime
 
 # ===========================================================================
