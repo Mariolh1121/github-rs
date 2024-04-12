@@ -1,33 +1,27 @@
-# Nombre del Programa/Proyecto
+# Count DNA nucleotides
 
 
 ## Uso
-
-
+Frecuencia de nucleotidos en una secuencia
 ```
 
 ```
-
-
 ## Salida
-
+Se imprime la frecuencia de cada nucleotido en cada secuencia.
 
 ## Control de errores
-
-
+En este archivo no se requiere de.
 
 ## Pruebas
-
+El programa funciona a partir de abrir el archivo de la secuencia
 ```
 ```
-
 ## Datos
-
 El script está diseñado para operar en archivos de texto plano, con un número por línea. No hay restricciones en el número de líneas en el archivo.
 
 ## Metadatos y documentación
 
-Este README ofrece información de uso básico. Para obtener información más detallada sobre el diseño y la implementación del script, consulte [Enlace a la documentación].
+Este README ofrece información de uso básico. Para obtener información más detallada sobre el diseño y la implementación del script, consulte .
 
 ## Código fuente
 
@@ -45,5 +39,5 @@ Si utiliza este script en su trabajo, por favor cite: [mariolh@lcg.unam.mx].
 
 Si tiene problemas o preguntas, por favor abra un problema en este repositorio o póngase en contacto con nosotros en: [mariolh@lcg.unam.mx].
 
-Si tiene problemas o preguntas, por favor abra un problema en este repositorio o póngase en contacto con nosotros en: [información de contacto].
+
 
