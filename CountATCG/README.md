@@ -2,9 +2,9 @@
 
 
 ## Uso
-Frecuencia de nucleotidos en una secuencia
+El script acepta dos argumentos, el nombre del archivo y un nucleotido en particular a buscar (opcional)
 ```
-
+python template_program.py <file> [-n]
 ```
 ## Salida
 Se imprime la frecuencia de cada nucleotido en cada secuencia.
@@ -13,8 +13,9 @@ Se imprime la frecuencia de cada nucleotido en cada secuencia.
 En este archivo no se requiere de.
 
 ## Pruebas
-El programa funciona a partir de abrir el archivo de la secuencia
+El programa funciona a partir de abrir el archivo de la secuencia, donde en la línea de comandos será colocado como argumento posicional
 ```
+python template_program.py <file>
 ```
 ## Datos
 El script está diseñado para operar en archivos de texto plano, con un número por línea. No hay restricciones en el número de líneas en el archivo.
