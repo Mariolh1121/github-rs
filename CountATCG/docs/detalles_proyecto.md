@@ -14,6 +14,7 @@ Contar la frecuencia de ATCG de un archivo
 
 + El programa debería de acumular la frecuencia de "A", "T", "C" Y "G".
 + El programa debe aceptar un archivo de una secuencia de DNA.
++ Los nucleotidos contados deben pasar como un argumento opcional de la línea de comandos.
 
 ## Análisis y Diseño
 + El programa será desarrollado en el lenguaje de programación Python para asegurar una amplia compatibilidad y facilidad de uso.
@@ -43,9 +44,11 @@ Contar la frecuencia de ATCG de un archivo
 - **Descripción**:
 - 
 - **Flujo principal**:
-  + El usuario abre el archivo después de ejectuar el programa.
+  + El usuario abre el archivo después de ejectuar el programa a traves de la línea de comando
+  + El usuario puede proporcionar el nucleotido que desea contar (opcional)
   + El programa lee el archivo y lo guarda en una variable
   + El programa cuenta la ocurrencia de ATCG
 - **Flujos alternativos**:
   + El archivo no exíste o no se puede leer -> El sistema manda error
   + No hay nucleotidos dentro del archivo -> El sistema por default intenta contar la ocurrencia de estos nucleotidos.
+  + El archivo esta vació -> EL sistema manda un error en automatico
