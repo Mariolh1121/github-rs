@@ -42,7 +42,7 @@ Contar la frecuencia de ATCG de un archivo
 
 - **Actor**: Usuario
 - **Descripción**:
-- 
+  El código toma un archvivo y devuelve un conteo de la cantidad de nucleotidos que contiene la cádena de DNA, etc 
 - **Flujo principal**:
   + El usuario abre el archivo después de ejectuar el programa a traves de la línea de comando
   + El usuario puede proporcionar el nucleotido que desea contar (opcional)
