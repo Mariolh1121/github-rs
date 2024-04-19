@@ -43,7 +43,7 @@ def count_nucleotides(sequence, nucleotides):
     valid_characters = set('ATGC')
     for nucleotide in sequence:
            if nucleotide not in valid_characters:
-                  print(f"Sequence contains {nucleoetide}, it is invalid character")
+                  print(f"Sequence contains {nucleotide}, it is invalid character")
 
     sequence = sequence.upper()  # Convertir a mayúsculas para contar independientemente de la capitalización
     nA = sequence.count('A')
