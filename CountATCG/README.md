@@ -10,7 +10,7 @@ python template_program.py <file> [-n]
 Se imprime la frecuencia de cada nucleotido en cada secuencia.
 
 ## Control de errores
-En este archivo no se requiere de.
+En dado caso que haya un archivo no existente, se generará un mensaje de error. Además si se ingresa un argumento no válido, se generará un error.
 
 ## Pruebas
 El programa funciona a partir de abrir el archivo de la secuencia, donde en la línea de comandos será colocado como argumento posicional
