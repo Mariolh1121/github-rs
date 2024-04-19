@@ -37,33 +37,37 @@ METHOD
 import argparse
 
 def count_nucleotides(sequence, nucleotides):
+    if not sequence:
+        raise ValueError("El archivo está vacío, no se puede contar los nucleótidos.")
+
+    valid_characters = set('ATGC')
+    for nucleotide in sequence:
+           if nucleotide not in valid_characters:
+                  print(f"Sequence contains {nucleoetide}, it is invalid character")
+
+    sequence = sequence.upper()  # Convertir a mayúsculas para contar independientemente de la capitalización
     nA = sequence.count('A')
     nC = sequence.count('C')
     nG = sequence.count('G')
     nT = sequence.count('T')
     counts = {'A': nA, 'C': nC, 'G': nG, 'T': nT}
-    if nucleotides:
-        return {n: counts.get(n, 0) for n in nucleotides}
-    return counts
+    return {n: counts.get(n, 0) for n in nucleotides} if nucleotides else counts
 
-def main():
-    parser = argparse.ArgumentParser(description='Count occurrences of nucleotides in a DNA sequence file.')
-    parser.add_argument('filename', metavar='FILENAME', type=str, help='Name of the file containing the DNA sequence')
-    parser.add_argument('-n', '--nucleotides', metavar='N', nargs='+', type=str, help='List of nucleotides to count')
-    args = parser.parse_args()
+parser = argparse.ArgumentParser(description='Count occurrences of nucleotides in a DNA sequence file.')
+parser.add_argument('filename', metavar='FILENAME', type=str, help='Name of the file containing the DNA sequence')
+parser.add_argument('-n', '--nucleotides', metavar='N', nargs='+', type=str, help='List of nucleotides to count')
+args = parser.parse_args()
 
-    try:
-        with open(args.filename, 'r') as file:
-            sequence = file.read().strip().upper()
-            counts = count_nucleotides(sequence, args.nucleotides)
-            if args.nucleotides:
-                for nucleotide, count in counts.items():
-                    print(f"Frecuencia de {nucleotide}: {count}")
-            else:
-                for nucleotide, count in counts.items():
-                    print(f"Frecuencia de {nucleotide}: {count}")
-    except FileNotFoundError:
-        print(f"Error: El archivo '{args.filename}' no existe.")
+try:
+    with open(args.filename, 'r') as file:
+        sequence = file.read().strip().upper()
+        counts = count_nucleotides(sequence, args.nucleotides)
+        for nucleotide, count in counts.items():
+            print(f"Frecuencia de {nucleotide}: {count}")
+except FileNotFoundError:
+    print("Sorry, couldn't find the file.")
+except ValueError as e:
+    print(f"Error: {e}")
 # Posteriormente se imprime
 
 # ===========================================================================
